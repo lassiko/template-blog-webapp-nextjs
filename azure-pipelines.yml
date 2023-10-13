@@ -28,6 +28,12 @@ steps:
     npm install
     npm run build
 
+- script: |
+    echo "Running yarn install.."
+    yarn install 
+  
+  displayName: 'Check for .yarn cache or install packages'
+  
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '.'
